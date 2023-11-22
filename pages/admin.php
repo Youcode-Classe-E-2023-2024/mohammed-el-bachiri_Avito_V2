@@ -4,64 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Admin Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
-<!-- Navbar -->
-<nav class="bg-gray-800 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo or Brand Name -->
-        <div>
-            <a href="#" class="text-2xl font-bold">Your Project</a>
-        </div>
-
-        <!-- Navbar Links -->
-        <div class="flex space-x-4">
-            <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-300">Products</a>
-            <a href="#" class="hover:text-gray-300">Contact</a>
-
-            <!-- Add more links based on your requirements -->
-
-            <!-- User Authentication Section -->
-            <div class="flex items-center space-x-4">
-                <!-- Replace these links with actual authentication logic -->
-                <a href="#" class="hover:text-gray-300">Login</a>
-                <a href="#" class="hover:text-gray-300">Sign Up</a>
-            </div>
-        </div>
+<div class="flex">
+    <div class="w-[25%] h-screen from-sky-950 text-white bg-gradient-to-b bg-sky-800">
+        <img src="../img/logo.png" alt="" class="m-10 h-10">
+        <p class="w-full p-4 pl-10 my-2  text-2xl">Dashboard</p>
+        <p class="w-full p-4 pl-10 my-2 text-2xl">Products</p>
+        <p class="w-full p-4 pl-10 my-2 text-2xl">Sellers</p>
+        <p class="w-full p-4 pl-10 my-2 text-red-500 font-bold text-xl">Log Out</p>
     </div>
-</nav>
-
-<div class="container mx-auto p-8">
-
-    <!-- Super Admin Content -->
-    <h2 class="text-3xl font-bold mb-4">All Sellers and Clients</h2>
-
-    <!-- List of Sellers -->
-    <div class="mb-6">
-        <h3 class="text-xl font-bold mb-2">Sellers</h3>
-        <!-- Replace the following with actual seller data -->
-        <ul>
-            <li>Seller 1 <button class="bg-red-500 text-white px-2 py-1">Delete</button></li>
-            <li>Seller 2 <button class="bg-red-500 text-white px-2 py-1">Delete</button></li>
-            <!-- Add more sellers as needed -->
-        </ul>
+    <div id="divv" class="w-full">
+        <div id="d1" class="text-4xl">products</div>
+        <div id="d2" class="text-4xl">sillers</div>
+        <div id="d3" class="text-4xl">dashboard</div>
     </div>
-
-    <!-- List of Clients -->
-    <div>
-        <h3 class="text-xl font-bold mb-2">Clients</h3>
-        <!-- Replace the following with actual client data -->
-        <ul>
-            <li>Client 1 <button class="bg-red-500 text-white px-2 py-1">Delete</button></li>
-            <li>Client 2 <button class="bg-red-500 text-white px-2 py-1">Delete</button></li>
-            <!-- Add more clients as needed -->
-        </ul>
-    </div>
-
 </div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
