@@ -14,6 +14,9 @@ function hideDivs() {
     });
 }
 hideDivs();
+d[0].style.display = 'block';
+p[0].style.backgroundColor = 'rgb(8 47 73)';
+p[0].style.opacity = '1';
 p.forEach((ele)=>{
     ele.addEventListener('click', () => {
         lowerOpacity();

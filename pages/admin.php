@@ -9,17 +9,18 @@
 <body class="bg-gray-100">
 <!-- Navbar -->
 
-
-
-
 <div class="flex">
     <div class="w-[25%] h-screen from-sky-950 text-white bg-gradient-to-b bg-sky-800">
         <img src="../img/logo.png" alt="" class="m-10 h-10">
-        <p class="w-full p-4 pl-10 my-2  text-2xl">Dashboard</p>
-        <p class="w-full p-4 pl-10 my-2 text-2xl">Products</p>
-        <p class="w-full p-4 pl-10 my-2 text-2xl">Sellers</p>
-        <p class="w-full p-4 pl-10 my-2 text-red-500 font-bold text-xl">Log Out</p>
+        <p class="w-full p-4 pl-10 my-2  text-2xl hover:cursor-pointer">Dashboard</p>
+        <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Products</p>
+        <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Sellers</p>
+        <form action="log_out.php" method="post">
+        <button name="btn" class="text-start hover:opacity-70 w-full p-4 pl-10 my-2 text-red-500 font-bold text-xl">Log Out</button>
+        </form>
     </div>
+
+
 
     <div id="divv" class="w-full">
 
