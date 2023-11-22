@@ -14,10 +14,8 @@
         <img src="../img/logo.png" alt="" class="h-8">
         <a href="#" class="text-2xl font-bold">Client Dashboard</a>
         <div class="flex items-center space-x-4">
-            <a href="#" class="hover:text-gray-300">Home</a>
             <a href="#" class="hover:text-gray-300">Products</a>
-            <a href="#" class="hover:text-gray-300">Orders</a>
-            <button class="bg-red-500 text-white px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
+            <button class=" bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
         </div>
     </div>
 </nav>
@@ -37,14 +35,14 @@
                 <h3 class="text-xl font-bold mb-2">Product A</h3>
                 <p>Description of Product A.</p>
                 <div class="mt-4 flex items-center space-x-2">
-                    <button class="bg-green-500 text-white px-2 py-1 rounded">Buy</button>
+                    <button class="bg-green-500 text-white px-2 py-1 rounded hover:opacity-70 transition-all">Buy</button>
                 </div>
             </li>
             <li class="bg-white p-4 rounded shadow">
                 <h3 class="text-xl font-bold mb-2">Product B</h3>
                 <p>Description of Product B.</p>
                 <div class="mt-4 flex items-center space-x-2">
-                    <button class="bg-green-500 text-white px-2 py-1 rounded">Buy</button>
+                    <button class="bg-green-500 text-white px-2 py-1 rounded hover:opacity-70 transition-all">Buy</button>
                 </div>
             </li>
             <!-- Add more products as needed -->
