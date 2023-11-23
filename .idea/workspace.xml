@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mohammed-el-bachiri_Avito_V2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/products.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/img/products.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/img/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/users.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/img/users.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seller.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/seller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/signup.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YWYOP7Tobs3TUNgYzzehpoP8gY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\mohammed-el-bachiri_Avito_V2\AVITO V2" />
+      <recent name="C:\xampp\htdocs\mohammed-el-bachiri_Avito_V2\pages\js" />
+      <recent name="C:\xampp\htdocs\mohammed-el-bachiri_Avito_V2\pages" />
+      <recent name="C:\xampp\htdocs\mohammed-el-bachiri_Avito_V2" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="" />
+      <created>1700642773580</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700642773580</updated>
+      <workItem from="1700642775791" duration="3017000" />
+      <workItem from="1700646891363" duration="6166000" />
+      <workItem from="1700658254969" duration="11407000" />
+      <workItem from="1700684200099" duration="5360000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

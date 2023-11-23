@@ -11,7 +11,7 @@
 <!-- Navbar -->
 <nav class="bg-sky-500 bg-gradient-to-r from-indigo-500 p-4 text-white">
     <div class="container mx-auto flex justify-between items-center">
-        <img src="../img/logo.png" alt="" class="h-8">
+        <img src="img/logo.png" alt="" class="h-8">
         <a href="#" class="text-2xl font-bold">Client Dashboard</a>
         <div class="flex items-center space-x-4">
             <a href="#" class="hover:text-gray-300">Products</a>

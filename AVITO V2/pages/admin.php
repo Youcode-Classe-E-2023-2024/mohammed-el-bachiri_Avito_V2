@@ -11,7 +11,7 @@
 
 <div class="flex">
     <div class="w-[25%] h-screen from-sky-950 text-white bg-gradient-to-b bg-sky-800">
-        <img src="../img/logo.png" alt="" class="m-10 h-10">
+        <img src="img/logo.png" alt="" class="m-10 h-10">
         <p class="w-full p-4 pl-10 my-2  text-2xl hover:cursor-pointer">Dashboard</p>
         <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Products</p>
         <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Sellers</p>
@@ -29,21 +29,21 @@
             <h2 class="text-3xl font-bold mb-4">Statistics</h2>
             <section class="flex justify-between">
                 <section class="mb-8 flex bg-white p-5 w-[30%] shadow-sm rounded-lg justify-between">
-                    <img src="../img/users.png" alt="" class="rounded-full h-16">
+                    <img src="img/users.png" alt="" class="rounded-full h-16">
                     <section class="w-[70%]">
                         <p class="text-xl">2,298</p>
                         <p class="text-lg">Number of Users</p>
                     </section>
                 </section>
                 <section class="mb-8 flex bg-white p-5 w-[30%] shadow-sm rounded-lg justify-between">
-                    <img src="../img/profile.png" alt="" class="rounded-full h-16">
+                    <img src="img/profile.png" alt="" class="rounded-full h-16">
                     <section class="w-[70%]">
                         <p class="text-xl">2,298</p>
                         <p class="text-lg">New Users</p>
                     </section>
                 </section>
                 <section class="mb-8 flex bg-white p-5 w-[30%] shadow-sm rounded-lg justify-between">
-                    <img src="../img/products.png" alt="" class="rounded-full h-16">
+                    <img src="img/products.png" alt="" class="rounded-full h-16">
                     <section class="w-[70%]">
                         <p class="text-xl">2,298</p>
                         <p class="text-lg">Available Products</p>
@@ -101,7 +101,7 @@
 </div>
 
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
