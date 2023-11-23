@@ -20,7 +20,7 @@
             </svg>
             <h2 class="text-2xl font-bold">Login</h2>
         </div>
-        <form action="" method="POST">
+        <form action="include/login_traitment.php" method="POST">
 
             <div class="text-xs text-red-400 flex justify-between items-center">
                     <span>
