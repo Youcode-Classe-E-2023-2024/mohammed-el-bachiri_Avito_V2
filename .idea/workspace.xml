@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/pages/admin.php" afterDir="false" />
-    </list>
+    <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +60,7 @@
       <workItem from="1700646891363" duration="6166000" />
       <workItem from="1700658254969" duration="11407000" />
       <workItem from="1700684200099" duration="5360000" />
-      <workItem from="1700726470366" duration="12402000" />
+      <workItem from="1700726470366" duration="12564000" />
     </task>
     <servers />
   </component>
