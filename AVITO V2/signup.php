@@ -18,28 +18,31 @@
 
             <h2 class="text-2xl font-bold">Sign Up</h2>
         </div>
-        <form action="#" method="POST">
+        <form action="include/signup_traitment.php" method="POST">
             <!-- username -->
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">First Name</label>
-                <input class="border rounded px-3 py-1 mt-2" type="text"/>
+                <input class="border rounded px-3 py-1 mt-2" type="text" name="fname"/>
             </div>
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">Last Name</label>
-                <input class="border rounded px-3 py-1 mt-2" type="text"/>
+                <input class="border rounded px-3 py-1 mt-2" type="text" name="lname"/>
             </div>
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">Email</label>
-                <input class="border rounded px-3 py-1 mt-2" type="email"/>
+                <input class="border rounded px-3 py-1 mt-2" type="email" name="email"/>
             </div>
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">Password</label>
-                <input class="border rounded px-3 py-1 mt-2" type="password"/>
+                <input class="border rounded px-3 py-1 mt-2" type="password" name="pass"/>
             </div>
 
             <div class="flex flex-col items-center justify-center my-3">
-                <button class="my-3 py-1 w-full rounded bg-blue-600 text-blue-200">
-                    Register
+                <button name="seller_btn" class="my-3 py-1 w-full rounded bg-blue-600 bg-green-400 text-white hover:opacity-80">
+                    Register as Seller
+                </button>
+                <button name="client_btn" class="my-3 py-1 w-full rounded bg-blue-600 bg-orange-400 text-white hover:opacity-80">
+                    Register as Client
                 </button>
                 <p class="text-xs text-gray-500">
                     Already have an Account ?
