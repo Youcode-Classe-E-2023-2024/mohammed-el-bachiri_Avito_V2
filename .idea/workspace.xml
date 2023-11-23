@@ -4,8 +4,6 @@
     <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVITO V2/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVITO V2/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVITO V2/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,7 @@
       <workItem from="1700646891363" duration="6166000" />
       <workItem from="1700658254969" duration="11407000" />
       <workItem from="1700684200099" duration="5360000" />
-      <workItem from="1700726470366" duration="3722000" />
+      <workItem from="1700726470366" duration="5396000" />
     </task>
     <servers />
   </component>
