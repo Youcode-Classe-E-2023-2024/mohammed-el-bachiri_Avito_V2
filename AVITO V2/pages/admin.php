@@ -12,19 +12,19 @@
 <div class="flex">
     <div class="w-[25%] h-screen from-sky-950 text-white bg-gradient-to-b bg-sky-800">
         <img src="img/logo.png" alt="" class="m-10 h-10">
-        <p class="w-full p-4 pl-10 my-2  text-2xl hover:cursor-pointer">Dashboard</p>
-        <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Products</p>
-        <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Sellers</p>
+        <div class="opacity-80 bg-none" id="l">
+            <p class="w-full p-4 pl-10 my-2  text-2xl hover:cursor-pointer">Dashboard</p>
+            <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Products</p>
+            <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Sellers</p>
+        </div>
         <form action="log_out.php" method="post">
         <button name="btn" class="text-start hover:opacity-70 w-full p-4 pl-10 my-2 text-red-500 font-bold text-xl">Log Out</button>
         </form>
     </div>
 
+    <div class="w-full">
 
-
-    <div id="divv" class="w-full">
-
-        <div class="container mx-auto p-8">
+        <div class="container mx-auto p-8" id="div1">
             <!-- Statistics Section -->
             <h2 class="text-3xl font-bold mb-4">Statistics</h2>
             <section class="flex justify-between">
@@ -92,16 +92,65 @@
 
         </div>
 
+        <div id="div2">sillers</div>
 
-
-
-        <div>sillers</div>
-        <div>dashboard</div>
+        <div id="div3">dashboard</div>
     </div>
 </div>
 
 
-<script src="js/script.js"></script>
+<script src="js/script.js">
+    const p = document.querySelectorAll('div#l p');
+    const d1 = document.querySelector('#div1');
+    const d2 = document.querySelector('#div2');
+    const d3 = document.querySelector('#div3');
+
+    const div = [d1, d2, d3];
+
+    function lowerOpacity() {
+        p.forEach((element)=>{
+            element.style.opacity = '.7';
+            element.style.background = 'none';
+        });
+    }
+    lowerOpacity();
+
+    function hideDivs() {
+        div.forEach((element) => {
+            element.style.display = 'none';
+        });
+    }
+    hideDivs();
+
+    div[0].style.display = 'block';
+    p[0].style.backgroundColor = 'rgb(8 47 73)';
+    p[0].style.opacity = '1';
+
+    p.forEach((ele)=>{
+        ele.addEventListener('click', () => {
+            lowerOpacity();
+            ele.style.opacity = '1';
+            ele.style.backgroundColor = 'rgb(8 47 73)';
+
+            switch (ele) {
+                case ele = p[0]:
+                    hideDivs();
+                    div[0].style.display = 'block';
+                    break;
+
+                case ele = p[1]:
+                    hideDivs();
+                    div[1].style.display = 'block';
+                    break;
+
+                case ele = p[2]:
+                    hideDivs();
+                    div[2].style.display = 'block';
+                    break;
+            }
+        });
+    })
+</script>
 
 </body>
 </html>
