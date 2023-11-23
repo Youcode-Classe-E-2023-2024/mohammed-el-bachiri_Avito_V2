@@ -99,7 +99,7 @@
 </div>
 
 
-<script src="js/script.js">
+<script>
     const p = document.querySelectorAll('div#l p');
     const d1 = document.querySelector('#div1');
     const d2 = document.querySelector('#div2');
