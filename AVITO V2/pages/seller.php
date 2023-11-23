@@ -9,14 +9,14 @@
 <body class="bg-gray-100">
 
 <!-- Navbar -->
-<nav class="bg-green-500 p-4 text-white">
-    <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold">Seller Dashboard</a>
+<nav class="bg-green-500 p-4 text-white bg-gradient-to-l from-indigo-500">
+    <div class="container mx-auto flex justify-between items-center ">
+        <img src="img/logo.png" alt="" class="h-8">
+        <a href="#" class="ml-40 text-2xl font-bold">Seller Dashboard</a>
         <div class="flex items-center space-x-4">
-            <a href="#" class="hover:text-gray-300">Home</a>
-            <a href="#" class="hover:text-gray-300">Products</a>
-            <a href="#" class="hover:text-gray-300">Orders</a>
-            <button class="bg-red-500 text-white px-2 py-1 rounded">Logout</button>
+            <a href="#" class="hover:text-gray-300">My Products</a>
+            <a href="#" class="hover:text-gray-300">Add Product</a>
+            <button class=" bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
         </div>
     </div>
 </nav>
