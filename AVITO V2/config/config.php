@@ -27,11 +27,10 @@ CREATE TABLE Products (
     price INT NOT NULL
 );";
 
-$result = $connect->query($sql);
-
-if(!$result){
+$rsl1 = $connect->query($sql1);
+$rsl2 = $connect->query($sql2);
+if (!$rsl1 || !$rsl2) {
     die("could not create table ! . $connect->errno");
-
 }
 
 ?>
