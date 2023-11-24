@@ -28,5 +28,12 @@ function registerUser($connect, $fname, $lname, $email, $pass, $role) {
     }
 }
 
+if (isset($_POST['seller_btn'])) {
+    registerUser($connect,$fname,$lname,$email,$pass, 'seller');
+}
+if (isset($_POST['client_btn'])) {
+    registerUser($connect,$fname,$lname,$email,$pass, 'client');
+}
+
 exit();
 ?>
