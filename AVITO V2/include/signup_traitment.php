@@ -18,7 +18,14 @@ if (isset($_POST['seller_btn'])) {
         header('location: ../signup.php');
         $_SESSION['acc_exist'] = true;
     } else {
-        echo 'error : ' . mysqli_error($connect);
+        $sql_insert = "INSERT INTO users (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, 'seller')";
+        $stmt =  $connect->prepare($sql_insert);
+        $stmt->bind_param('ssss', $fname, $lname, $email, $pass);
+        $result = $stmt->execute();
+        if ($result) {
+            header('location: ../signup.php');
+            $_SESSION['acc_created'] = true;
+        }
     }
 }
 
