@@ -10,7 +10,7 @@ if($connect == false){
     die("Could not connect to Database !"  . mysqli_connect_error());
 }
 $sql1 = "
-CREATE TABLE Users (
+CREATE TABLE IF NOT EXISTS Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Users (
 ); ";
 
 $sql2 = "
-CREATE TABLE Products (
+CREATE TABLE IF NOT EXISTS Products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description TEXT,
