@@ -13,28 +13,43 @@
 <!-- component -->
 <!-- This is an example component -->
 <div class='bg-white h-screen w-screen flex justify-center items-center'>
-    <div class="px-6 py-3 rounded border w-64">
+    <div class="px-6 py-3 rounded border w-64 flex flex-col justify-between">
         <div class="flex flex-col items-center justify-center mb-4">
-
             <h2 class="text-2xl font-bold">Sign Up</h2>
         </div>
+        <?php
+        session_start();
+        if (isset($_SESSION['acc_exist']) && $_SESSION['acc_exist']){
+            echo "<span class='text-xs text-red-500'><b></b>Account Already exist !</span>";
+            unset($_SESSION['acc_exist']);
+        }
+        if (isset($_SESSION['acc_created']) && $_SESSION['acc_created']) {
+            ?>
+            <span class='text-sm text-green-500 my-2'><b></b>Account Created Successfully !</span>
+            <a href="login.php" class="w-fit bg-green-500 hover:opacity-80 text-white font-bold py-2 px-4 rounded my-2">LOG IN ?</a>
+
+        <?php
+        unset($_SESSION['acc_created']);
+        exit();
+        }
+        ?>
         <form action="include/signup_traitment.php" method="POST">
             <!-- username -->
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">First Name</label>
-                <input class="border rounded px-3 py-1 mt-2" type="text" name="fname"/>
+                <input class="border rounded px-3 py-1 mt-2" type="text" required name="fname"/>
             </div>
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">Last Name</label>
-                <input class="border rounded px-3 py-1 mt-2" type="text" name="lname"/>
+                <input class="border rounded px-3 py-1 mt-2" type="text" required name="lname"/>
             </div>
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">Email</label>
-                <input class="border rounded px-3 py-1 mt-2" type="email" name="email"/>
+                <input class="border rounded px-3 py-1 mt-2" type="email" required name="email"/>
             </div>
             <div class="flex flex-col my-2">
                 <label class="text-xs text-gray-400">Password</label>
-                <input class="border rounded px-3 py-1 mt-2" type="password" name="pass"/>
+                <input class="border rounded px-3 py-1 mt-2" type="password" required name="pass"/>
             </div>
 
             <div class="flex flex-col items-center justify-center my-3">
