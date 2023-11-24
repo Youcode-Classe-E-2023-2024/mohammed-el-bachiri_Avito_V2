@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVITO V2/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/login.php" afterDir="false" />
@@ -67,7 +66,7 @@
       <workItem from="1700684200099" duration="5360000" />
       <workItem from="1700726470366" duration="12564000" />
       <workItem from="1700769048183" duration="754000" />
-      <workItem from="1700813841626" duration="18218000" />
+      <workItem from="1700813841626" duration="18527000" />
     </task>
     <servers />
   </component>
