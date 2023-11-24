@@ -6,8 +6,7 @@ include '../config/config.php';
     $email = $_POST['email'];
     $pass = $_POST['pass'];
 
-if (isset($_POST['seller_btn'])) {
-
+function registerUser($connect, $fname, $lname, $email, $pass, $role) {
     $sql_select = "SELECT email FROM users WHERE email = ?";
     $stmt1 = $connect->prepare($sql_select);
     $stmt1->bind_param('s', $email);
@@ -18,9 +17,9 @@ if (isset($_POST['seller_btn'])) {
         header('location: ../signup.php');
         $_SESSION['acc_exist'] = true;
     } else {
-        $sql_insert = "INSERT INTO users (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, 'seller')";
-        $stmt =  $connect->prepare($sql_insert);
-        $stmt->bind_param('ssss', $fname, $lname, $email, $pass);
+        $sql_insert = "INSERT INTO users (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $connect->prepare($sql_insert);
+        $stmt->bind_param('sssss', $fname, $lname, $email, $pass, $role);
         $result = $stmt->execute();
         if ($result) {
             header('location: ../signup.php');

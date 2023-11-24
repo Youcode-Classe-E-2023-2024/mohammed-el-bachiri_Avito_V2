@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVITO V2/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVITO V2/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <workItem from="1700684200099" duration="5360000" />
       <workItem from="1700726470366" duration="12564000" />
       <workItem from="1700769048183" duration="754000" />
-      <workItem from="1700813841626" duration="14522000" />
+      <workItem from="1700813841626" duration="18218000" />
     </task>
     <servers />
   </component>
