@@ -8,10 +8,10 @@ include '../config/config.php';
 
 function registerUser($connect, $fname, $lname, $email, $pass, $role) {
     $sql_select = "SELECT email FROM users WHERE email = ?";
-    $stmt1 = $connect->prepare($sql_select);
-    $stmt1->bind_param('s', $email);
-    $result1 = $stmt1->execute();
-    $arr = $stmt1->get_result();
+    $stmt = $connect->prepare($sql_select);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $arr = $stmt->get_result();
 
     if ($arr->num_rows != 0) {
         header('location: ../signup.php');
