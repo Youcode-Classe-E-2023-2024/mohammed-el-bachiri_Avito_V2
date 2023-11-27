@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVITO V2/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/AVITO V2/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/config/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/include/login_traitment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/include/signup_traitment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/client.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/img/products.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/img/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/img/users.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/pages/seller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVITO V2/signup.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +50,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -66,7 +81,15 @@
       <workItem from="1700684200099" duration="5360000" />
       <workItem from="1700726470366" duration="12564000" />
       <workItem from="1700769048183" duration="754000" />
-      <workItem from="1700813841626" duration="18527000" />
+      <workItem from="1700813841626" duration="19947000" />
+      <workItem from="1700851228677" duration="1868000" />
+      <workItem from="1700856644929" duration="10143000" />
+      <workItem from="1700866892021" duration="710000" />
+      <workItem from="1700907800111" duration="11000" />
+      <workItem from="1700908952261" duration="5989000" />
+      <workItem from="1700935115719" duration="594000" />
+      <workItem from="1700956783831" duration="2227000" />
+      <workItem from="1700995979586" duration="13127000" />
     </task>
     <servers />
   </component>
