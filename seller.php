@@ -1,11 +1,16 @@
 <?php
+include_once("config.php");
 session_start();
 if (!$_SESSION['seller_logged'] && !isset($_SESSION['seller_logged'])) {
     header('location: login.php');
-   exit();
+    exit();
 }
 
+$current_user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM products WHERE user_id = $current_user_id";
+$result = mysqli_query($connect, $sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +25,17 @@ if (!$_SESSION['seller_logged'] && !isset($_SESSION['seller_logged'])) {
 <nav class="bg-green-500 p-4 text-white bg-gradient-to-l from-indigo-500">
     <div class="container mx-auto flex justify-between items-center ">
         <img src="img/logo.png" alt="" class="h-8">
-        <a href="#" class="ml-40 text-2xl font-bold">Seller Dashboard</a>
+        <?php
+        $sql_user = "SELECT * FROM users WHERE id = $current_user_id";
+        $rslt = mysqli_query($connect, $sql_user);
+        $arr = $rslt->fetch_assoc();
+        ?>
+        <a href="#" class="ml-40 text-2xl font-bold">Seller <?= $current_user_id; ?> : <span class="text-green-300"><?= $arr['first_name'];?></span></a>
         <div class="flex items-center space-x-4">
             <a href="#" class="hover:text-gray-300">My Products</a>
             <a href="#" class="hover:text-gray-300">Add Product</a>
             <form action="logout.php" method="post">
-                <button name="seller_logout_btn" class=" bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
+                <button name="seller_logout_btn" class="bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
             </form>
         </div>
     </div>
@@ -40,55 +50,29 @@ if (!$_SESSION['seller_logged'] && !isset($_SESSION['seller_logged'])) {
 
         <!-- Product List -->
         <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Replace the following with actual product data -->
-            <li class="bg-white p-4 rounded shadow">
-                <h3 class="text-xl font-bold mb-2">Product 1</h3>
-                <p>Description of Product 1.</p>
-                <div class="mt-4 flex items-center space-x-2">
-                    <button class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
-                    <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
-                </div>
-            </li>
-            <li class="bg-white p-4 rounded shadow">
-                <h3 class="text-xl font-bold mb-2">Product 2</h3>
-                <p>Description of Product 2.</p>
-                <div class="mt-4 flex items-center space-x-2">
-                    <button class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
-                    <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
-                </div>
-            </li>
-            <!-- Add more products as needed -->
+
+            <?php
+            foreach ($result as $value) {
+                ?>
+                <li class="bg-white p-4 rounded shadow flex flex-col justify-between">
+                    <img src="<?= $value['photo_path']; ?>" class="mb-4" alt="">
+                    <h3 class="text-xl font-bold mb-2"><?= $value['title']; ?></h3>
+                    <p> <?= $value['description']; ?> </p>
+                    <div class="mt-4 flex items-center space-x-2 justify-between">
+                        <p class="bg-gradient-to-t bg-green-400 from-green-700  rounded shadow-xl text-white p-2"><?= $value['price'] ?> DH</p>
+                        <form action="edit_process.php" method="post">
+                            <button class="bg-red-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Delete</button>
+                        <button class="bg-blue-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Edit</button>
+                        </form>
+                    </div>
+                </li>
+            <?php } ?>
         </ul>
     </section>
 
-    <!-- Add Product Button -->
-    <form action="add_product.php" method="post">
-        <button name="btn" class="bg-green-500 text-white px-4 py-2 rounded">Add Product</button>
-    </form>
+    <a href="add_product.php" class="bg-green-500 text-white px-4 py-2 rounded">Add Product</a>
 
 </div>
 
-
-<?php
-include_once("config.php");
-$sql = "SELECT title, photo FROM products";
-$result = mysqli_query($connect, $sql);
-
-if ($result && mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $filename = $row['title'];
-        $filedata = $row['photo'];
-
-        // Echo the image with the base64 encoded data
-//        echo '<img src="data:image/jpeg;base64,' . base64_encode($filedata) . '" alt="' . $filename . '">';
-    }
-}
-
-mysqli_close($connect);
-?>
-
-<img src="data:image/jpeg;base64,<?php echo base64_encode($filedata); ?>" alt="">
-
 </body>
 </html>
-

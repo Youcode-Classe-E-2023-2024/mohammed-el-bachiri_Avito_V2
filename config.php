@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS users (
     last_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
+    profile_pc_path VARCHAR(255) NOT NULL,
     role VARCHAR(50) NOT NULL
 ); ";
 
@@ -25,7 +26,7 @@ $sql2 = "
     title VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
     price DECIMAL NOT NULL,
-    photo LONGBLOB NOT NULL,
+    photo_path VARCHAR(255) NOT NULL,
     user_id INT
 );";
 

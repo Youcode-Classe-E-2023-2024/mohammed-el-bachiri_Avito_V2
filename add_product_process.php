@@ -8,19 +8,22 @@ if (isset($_POST['btn'])) {
     $description = $_POST['description'];
     $price = $_POST['price'];
 
-    $photo = $_FILES['photo']['tmp_name'];
+    $uploadDir = 'uploads/';
+    $originalFileName = $_FILES['photo']['name'];
+    $uploadFile = $uploadDir . basename($originalFileName);
 
-    $imageData = file_get_contents($photo);
-    $imageData = $connect->real_escape_string($imageData);
+    move_uploaded_file($_FILES['photo']['tmp_name'], $uploadFile);
 
-    $sql = "INSERT INTO products (title, description, price, photo, user_id) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO products (title, description, price, photo_path, user_id) VALUES (?, ?, ?, ?, ?)";
 
     $stm = $connect->prepare($sql);
-    $stm->bind_param('ssisi', $title, $description, $price, $imageData, $user_id);
+    $stm->bind_param('ssisi', $title, $description, $price, $uploadFile, $user_id);
     $rslt = $stm->execute();
+
     if (!$rslt) {
         echo 'error: ' . $stm->error;
     } else {
         header('location: seller.php');
     }
 }
+?>

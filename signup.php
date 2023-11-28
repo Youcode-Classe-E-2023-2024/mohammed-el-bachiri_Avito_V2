@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (isset($_SESSION['seller_logged']) && $_SESSION['seller_logged']) {
+    header('location: seller.php');
+    exit();
+} elseif (isset($_SESSION['admin_logged']) && $_SESSION['admin_logged']) {
+    header('location: admin.php');
+    exit();
+} elseif (isset($_SESSION['client_logged']) && $_SESSION['client_logged']) {
+    header('location: client.php');
+    exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
