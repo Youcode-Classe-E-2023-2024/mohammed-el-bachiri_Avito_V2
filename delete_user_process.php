@@ -13,7 +13,6 @@ if (isset($_POST['yes_btn'])) {
     if ($result_user && $result_products) {
         unset($_SESSION['seller_logged']);
         unset($_SESSION['client_logged']);
-        unset($_SESSION['admin_logged']);
         unset($_SESSION['user_id']);
         header('location: admin.php');
     } else {

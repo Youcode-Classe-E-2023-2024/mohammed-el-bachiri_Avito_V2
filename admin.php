@@ -132,7 +132,17 @@ $rslt_users = mysqli_query($connect, $sql_users);
                             <td class="p-4">
                                 <img src="<?= $product['photo_path']; ?>" alt="" class="h-20 w-20 rounded-xl">
                             </td>
-                            <td>hey</td>
+                            <?php
+                            $x = $product['user_id'];
+                            if ($x !== NULL) {
+                                $sql1 = "SELECT * FROM users WHERE id = '$x'";
+                                $rsltt = mysqli_query($connect, $sql1);
+                                $arrr = $rsltt->fetch_assoc(); ?>
+
+                            <td><?= $arrr['first_name'];?></td>
+                            <?php } else { ?>
+                            <td class="text-red-500"><?='ADDED BY ADMIN'; ?></td>
+                            <?php } ?>
                             <td class="p-4"><?= $product['title']; ?></td>
                             <td class="p-4"><?= $product['description']; ?></td>
                             <td class="p-4"><?= $product['price']; ?></td>
