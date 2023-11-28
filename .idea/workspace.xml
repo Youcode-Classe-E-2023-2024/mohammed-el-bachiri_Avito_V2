@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="262bf717-65ca-49dc-b237-98d351523b9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_product_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit_product_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_product_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit_profile_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_profile_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seller.php" beforeDir="false" afterPath="$PROJECT_DIR$/seller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup_traitment.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup_traitment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -82,7 +88,8 @@
       <workItem from="1700995979586" duration="13127000" />
       <workItem from="1701073691136" duration="77000" />
       <workItem from="1701077468370" duration="19198000" />
-      <workItem from="1701159678448" duration="10081000" />
+      <workItem from="1701159678448" duration="21925000" />
+      <workItem from="1701203963262" duration="5653000" />
     </task>
     <servers />
   </component>

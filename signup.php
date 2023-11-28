@@ -31,7 +31,6 @@ if (isset($_SESSION['seller_logged']) && $_SESSION['seller_logged']) {
             <h2 class="text-2xl font-bold">Sign Up</h2>
         </div>
         <?php
-        session_start();
         if (isset($_SESSION['acc_exist']) && $_SESSION['acc_exist']){
             echo "<span class='text-xs text-red-500'><b></b>Account Already exist !</span>";
             unset($_SESSION['acc_exist']);

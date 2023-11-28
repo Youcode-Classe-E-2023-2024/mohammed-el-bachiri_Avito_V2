@@ -1,7 +1,7 @@
 <?php
 include_once 'config.php';
 session_start();
-if (!$_SESSION['client_logged'] && !isset($_SESSION['client_logged'])) {
+if (!isset($_SESSION['client_logged']) && !isset($_SESSION['seller_logged'])) {
     header('location: login.php');
     exit();
 }

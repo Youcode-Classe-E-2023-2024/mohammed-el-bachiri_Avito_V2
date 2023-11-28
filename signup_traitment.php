@@ -7,6 +7,7 @@ function registerUser($connect, $fname, $lname, $email, $pass, $role) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
+    $profile_pc_path = 'img/profile.png';
     $pass = $_POST['pass'];
     $sql_select = "SELECT email FROM users WHERE email = ?";
     $stmt = $connect->prepare($sql_select);
@@ -18,9 +19,9 @@ function registerUser($connect, $fname, $lname, $email, $pass, $role) {
         header('location: signup.php');
         $_SESSION['acc_exist'] = true;
     } else {
-        $sql_insert = "INSERT INTO users (first_name, last_name, email, password, role) VALUES (?, ?, ?, ?, ?)";
+        $sql_insert = "INSERT INTO users (first_name, last_name, email, password, profile_pc_path, role) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $connect->prepare($sql_insert);
-        $stmt->bind_param('sssss', $fname, $lname, $email, $pass, $role);
+        $stmt->bind_param('ssssss', $fname, $lname, $email, $pass, $profile_pc_path, $role);
         $result = $stmt->execute();
         if ($result) {
             header('location: signup.php');

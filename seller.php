@@ -30,13 +30,15 @@ $result = mysqli_query($connect, $sql);
         $rslt = mysqli_query($connect, $sql_user);
         $arr = $rslt->fetch_assoc();
         ?>
-        <a href="#" class="ml-40 text-2xl font-bold">Seller <?= $current_user_id; ?> : <span class="text-green-300"><?= $arr['first_name'];?></span></a>
-        <div class="flex items-center space-x-4">
-            <a href="#" class="hover:text-gray-300">My Products</a>
-            <a href="#" class="hover:text-gray-300">Add Product</a>
-            <form action="logout.php" method="post" enctype="multipart/form-data">
-                <button name="seller_logout_btn" class="bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
-            </form>
+        <a href="#" class="text-xl font-bold opacity-90">Welcome Back MR <span class="text-green-300 text-2xl opacity-100"><?= $arr['first_name'];?></span></a>
+        <img src="<?= $arr['profile_pc_path'] ?>" class="h-12 w-12 rounded-full cursor-pointer hover:cursor-pointer hover:opacity-80" id="profile_btn" alt="">
+            <div id="menu" class="hidden absolute top-20 right-4 bg-gray-600 p-3 rounded flex-col">
+                <a href="profile.php" class="hover:text-gray-300">My Profile</a>
+                <a href="add_product.php" class="hover:text-gray-300 my-4">Add Product</a>
+                <form action="logout.php" method="post" enctype="multipart/form-data">
+                    <button name="seller_logout_btn" class="bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
+                </form>
+            </div>
         </div>
     </div>
 </nav>
@@ -60,11 +62,12 @@ $result = mysqli_query($connect, $sql);
                     <p> <?= $value['description']; ?> </p>
                     <div class="mt-4 flex items-center space-x-2 justify-between">
                         <p class="bg-gradient-to-t bg-green-400 from-green-700  rounded shadow-xl text-white p-2"><?= $value['price'] ?> DH</p>
-                        <form action="" method="post">
-                            <button class="bg-red-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Delete</button>
+                        <form action="delete_product_confirmation.php" method="post">
+                            <button class="bg-red-500 text-white py-2 px-4 rounded hover:opacity-80 transition-all shadow-xl">Delete</button>
+                            <input name="product_id" type="hidden" value="<?= $value['id']; ?>">
                         </form>
                         <form action="edit_product.php" method="post">
-                            <button name="edit" class="bg-blue-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Edit</button>
+                            <button name="edit" class="bg-blue-500 text-white px-4 py-2 rounded hover:opacity-80 transition-all shadow-xl">Edit</button>
                             <input name="product_id" type="hidden" value="<?= $value['id']; ?>">
                         </form>
                     </div>
@@ -77,5 +80,6 @@ $result = mysqli_query($connect, $sql);
 
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>

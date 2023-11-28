@@ -1,10 +1,23 @@
 <?php
 session_start();
-if ($_SESSION['admin_logged'] == false && !isset($_SESSION['admin_logged'])) {
+require_once 'config.php';
+if (!$_SESSION['admin_logged'] && !isset($_SESSION['admin_logged'])) {
     header('location: login.php');
     exit();
 }
+$sql_products = "SELECT * FROM products";
+$sql_clients =  "SELECT * FROM users WHERE role = 'client'";
+$sql_sellers =  "SELECT * FROM users WHERE role = 'seller'";
+$sql_users = "SELECT * FROM users";
+
+$rslt_sellers = mysqli_query($connect, $sql_sellers);
+$rslt_clients = mysqli_query($connect, $sql_clients);
+$rslt_products = mysqli_query($connect, $sql_products);
+$rslt_users = mysqli_query($connect, $sql_users);
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,13 +29,12 @@ if ($_SESSION['admin_logged'] == false && !isset($_SESSION['admin_logged'])) {
 <body class="bg-gray-100">
 <!-- Navbar -->
 
-<div class="flex">
+<div class="flex h-screen">
     <div class="w-[25%] h-screen from-sky-950 text-white bg-gradient-to-b bg-sky-800">
         <img src="img/logo.png" alt="" class="m-10 h-10">
         <div class="opacity-80 bg-none" id="l">
             <p class="w-full p-4 pl-10 my-2  text-2xl hover:cursor-pointer">Dashboard</p>
             <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Products</p>
-            <p class="w-full p-4 pl-10 my-2 text-2xl hover:cursor-pointer">Sellers</p>
         </div>
         <form action="logout.php" method="post">
         <button name="admin_logout_btn" class="text-start hover:opacity-70 w-full p-4 pl-10 my-2 text-red-500 font-bold text-xl">Log Out</button>
@@ -38,21 +50,21 @@ if ($_SESSION['admin_logged'] == false && !isset($_SESSION['admin_logged'])) {
                 <section class="mb-8 flex bg-white p-5 w-[30%] shadow-sm rounded-lg justify-between">
                     <img src="img/users.png" alt="" class="rounded-full h-16">
                     <section class="w-[70%]">
-                        <p class="text-xl">2,298</p>
-                        <p class="text-lg">Number of Users</p>
+                        <p class="text-xl"><?= mysqli_num_rows($rslt_clients);?></p>
+                        <p class="text-lg">Clients</p>
                     </section>
                 </section>
                 <section class="mb-8 flex bg-white p-5 w-[30%] shadow-sm rounded-lg justify-between">
                     <img src="img/profile.png" alt="" class="rounded-full h-16">
                     <section class="w-[70%]">
-                        <p class="text-xl">2,298</p>
-                        <p class="text-lg">New Users</p>
+                        <p class="text-xl"><?= mysqli_num_rows($rslt_sellers)?></p>
+                        <p class="text-lg">Sellers</p>
                     </section>
                 </section>
                 <section class="mb-8 flex bg-white p-5 w-[30%] shadow-sm rounded-lg justify-between">
                     <img src="img/products.png" alt="" class="rounded-full h-16">
                     <section class="w-[70%]">
-                        <p class="text-xl">2,298</p>
+                        <p class="text-xl"><?= mysqli_num_rows($rslt_products); ?></p>
                         <p class="text-lg">Available Products</p>
                     </section>
                 </section>
@@ -65,43 +77,82 @@ if ($_SESSION['admin_logged'] == false && !isset($_SESSION['admin_logged'])) {
                 <table class="w-full border-collapse border border-gray-300">
                     <thead>
                     <tr class="bg-gray-200">
-                        <th class="p-4 text-left">Name</th>
+                        <th class="p-4 text-left">Profile</th>
+                        <th class="p-4 text-left">Full Name</th>
                         <th class="p-4 text-left">Email</th>
                         <th class="p-4 text-left">Role</th>
-                        <th class="p-4 text-left">Status</th>
                         <th class="p-4 text-left text-center">Actions</th>
+
                     </tr>
                     </thead>
                     <tbody>
-                    <!-- Replace the following with actual user data -->
+                    <?php foreach ($rslt_users as $vl_user) { ?>
                     <tr>
-                        <td class="p-4">John Doe</td>
-                        <td class="p-4">john.doe@example.com</td>
-                        <td class="p-4">Seller</td>
-                        <td class="p-4">Active</td>
+                        <td class="p-4">
+                            <img src="<?= $vl_user['profile_pc_path']; ?>" alt="" class="h-8 w-8 rounded-full">
+                        </td>
+                        <td class="p-4"><?php echo $vl_user['first_name'] . ' ' . $vl_user['last_name']; ?></td>
+                        <td class="p-4"><?= $vl_user['email']; ?></td>
+                        <td class="p-4"><?= $vl_user['role']; ?></td>
                         <td class="p-4 flex justify-center ">
-                            <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                            <form action="delete_user.php" method="post">
+                                <button class="bg-red-500 text-white py-2 px-4 rounded hover:opacity-80 transition-all shadow-xl">Delete</button>
+                                <input name="id" type="hidden" value="<?= $vl_user['id']; ?>">
+                            </form>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="p-4">Jane Smith</td>
-                        <td class="p-4">jane.smith@example.com</td>
-                        <td class="p-4">Client</td>
-                        <td class="p-4">Inactive</td>
-                        <td class="p-4 flex justify-center ">
-                            <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
-                        </td>
-                    </tr>
-                    <!-- Add more users as needed -->
+                    <?php } ?>
                     </tbody>
                 </table>
             </section>
 
         </div>
 
-        <div id="div2">sillers</div>
+        <div id="div2" class="m-10">
+            <div class=" flex justify-end">
+                <a href="add_product.php" class="bg-green-500 text-white px-4 py-2 rounded mb-4 hover:opacity-80">Add Product</a>
+            </div>
+            <section class="bg-white shadow-sm">
+                <!-- Table of Users -->
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-4 text-left">Photo</th>
+                        <th class="p-4 text-left">Seller Name</th>
+                        <th class="p-4 text-left">Title</th>
+                        <th class="p-4 text-left">Description</th>
+                        <th class="p-4 text-left">price</th>
+                        <th class="p-4 text-left text-center">Actions</th>
 
-        <div id="div3">dashboard</div>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($rslt_products as $product) { ?>
+                        <tr>
+                            <td class="p-4">
+                                <img src="<?= $product['photo_path']; ?>" alt="" class="h-20 w-20 rounded-xl">
+                            </td>
+                            <td>hey</td>
+                            <td class="p-4"><?= $product['title']; ?></td>
+                            <td class="p-4"><?= $product['description']; ?></td>
+                            <td class="p-4"><?= $product['price']; ?></td>
+                            <td class="p-4 h-full flex justify-around mt-4">
+                                <form action="delete_product_confirmation.php" method="post">
+                                    <button class="bg-red-500 text-white py-2 px-4 rounded hover:opacity-80 transition-all shadow-xl">Delete</button>
+                                    <input name="product_id" type="hidden" value="<?= $product['id']; ?>">
+                                </form>
+                                <form action="edit_product.php" method="post">
+                                    <button name="edit" class="bg-blue-500 text-white px-4 py-2 rounded hover:opacity-80 transition-all shadow-xl">Edit</button>
+                                    <input name="product_id" type="hidden" value="<?= $product['id']; ?>">
+                                </form>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+            </section>
+
+        </div>
     </div>
 </div>
 
@@ -110,9 +161,8 @@ if ($_SESSION['admin_logged'] == false && !isset($_SESSION['admin_logged'])) {
     const p = document.querySelectorAll('div#l p');
     const d1 = document.querySelector('#div1');
     const d2 = document.querySelector('#div2');
-    const d3 = document.querySelector('#div3');
 
-    const div = [d1, d2, d3];
+    const div = [d1, d2];
 
     function lowerOpacity() {
         p.forEach((element)=>{
@@ -148,11 +198,6 @@ if ($_SESSION['admin_logged'] == false && !isset($_SESSION['admin_logged'])) {
                 case ele = p[1]:
                     hideDivs();
                     div[1].style.display = 'block';
-                    break;
-
-                case ele = p[2]:
-                    hideDivs();
-                    div[2].style.display = 'block';
                     break;
             }
         });
