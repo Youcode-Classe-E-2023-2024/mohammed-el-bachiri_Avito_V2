@@ -34,7 +34,7 @@ $result = mysqli_query($connect, $sql);
         <div class="flex items-center space-x-4">
             <a href="#" class="hover:text-gray-300">My Products</a>
             <a href="#" class="hover:text-gray-300">Add Product</a>
-            <form action="logout.php" method="post">
+            <form action="logout.php" method="post" enctype="multipart/form-data">
                 <button name="seller_logout_btn" class="bg-red-500 px-2 py-1 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
             </form>
         </div>
@@ -60,9 +60,12 @@ $result = mysqli_query($connect, $sql);
                     <p> <?= $value['description']; ?> </p>
                     <div class="mt-4 flex items-center space-x-2 justify-between">
                         <p class="bg-gradient-to-t bg-green-400 from-green-700  rounded shadow-xl text-white p-2"><?= $value['price'] ?> DH</p>
-                        <form action="edit_process.php" method="post">
+                        <form action="" method="post">
                             <button class="bg-red-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Delete</button>
-                        <button class="bg-blue-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Edit</button>
+                        </form>
+                        <form action="edit_product.php" method="post">
+                            <button name="edit" class="bg-blue-500 text-white px-2 py-1 rounded hover:opacity-80 transition-all shadow-xl">Edit</button>
+                            <input name="product_id" type="hidden" value="<?= $value['id']; ?>">
                         </form>
                     </div>
                 </li>
