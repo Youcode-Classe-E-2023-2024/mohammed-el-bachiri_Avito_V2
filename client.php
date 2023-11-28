@@ -33,7 +33,7 @@ $result = mysqli_query($connect, $sql);
             <p class="text-xs text-gray-300">Welcome Back <span class=" font-bold text-lg"><?= $value['first_name'];?></span></p>
         <div class="flex items-center space-x-4">
         <img src="<?= $value['profile_pc_path'];?>" class="h-12 w-12 rounded-full hover:cursor-pointer hover:opacity-80" id="profile_btn" alt="">
-        <div id="menu" class="hidden absolute top-20 right-4 bg-gray-600 p-3 rounded">
+        <div id="menu" class="hidden absolute top-20 right-4 bg-gray-600 p-3 rounded flex-col">
             <a href="profile.php" class="my-2 hover:opacity-70">Profile</a>
             <form action="logout.php" method="post">
                 <button name="client_logout_btn" class="text-red-500 rounded hover:opacity-80 font-bold cursor-pointer">Log out</button>
