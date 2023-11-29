@@ -14,7 +14,7 @@ if (isset($_POST['btn'])) {
 
     move_uploaded_file($_FILES['photo']['tmp_name'], $uploadFile);
 
-    $sql = "INSERT INTO products (title, description, price, photo_path, user_id) VALUES (?, ?, ?, ?, (SELECT id FROM users WHERE id = ?))"; // hh
+    $sql = "INSERT INTO products (title, description, price, photo_path, user_id) VALUES (?, ?, ?, ?, (SELECT id FROM users WHERE id = ?))";
 
     $stm = $connect->prepare($sql);
     $stm->bind_param('ssisi', $title, $description, $price, $uploadFile, $user_id);
